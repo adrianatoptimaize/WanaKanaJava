@@ -15,12 +15,12 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <!-- used for capitalizing words. may be removed, not sure yet. -->
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-            <version>${java.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            &lt;!&ndash; used for capitalizing words. may be removed, not sure yet. &ndash;&gt;-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-text</artifactId>-->
+<!--            <version>1.8</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.testng</groupId>

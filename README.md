@@ -12,6 +12,7 @@ PURPOSE OF THIS FORK
 
 For use in plain Java (not Android), as a library.
 To transcribe to non-scientific Romaji (x to a, b, c not d) 
+To have variant transcriptions, not only one main form to display.
 
 Conversion for Hiragana <-> Katakana was kept.
 
