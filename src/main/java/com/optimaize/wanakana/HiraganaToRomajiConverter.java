@@ -70,7 +70,7 @@ public class HiraganaToRomajiConverter implements Converter {
 //                }
 
                 //detect double consonant
-                if (chunkSize == 1 & String.valueOf(chunk.charAt(0)).equals("っ") & cursor < (len - 1)) {
+                if (chunkSize == 1 && String.valueOf(chunk.charAt(0)).equals("っ") && cursor < (len - 1)) {
                     nextCharIsDoubleConsonant = true;
                     latinChar = "";
                     break;
@@ -90,12 +90,17 @@ public class HiraganaToRomajiConverter implements Converter {
 //                } else
 
                 //detect diphthong that is not at the end of the string.
-                if (chunk.contains("う") & hiragana.indexOf("う") != hiragana.length() - 1 & hiraToRomaji.get(chunk) == null & hiragana.indexOf("う") != 0) {
+                if (chunk.contains("う")
+                        && hiragana.indexOf("う") != 0
+                        && hiragana.indexOf("う") != hiragana.length() - 1
+                        && hiraToRomaji.get(chunk) == null
+                        ) {
                     if (latin.toString().endsWith("o")) {
                         latinChar = hiraToRomaji.get(chunk.substring(1, 2));
                         latin.replace(latin.indexOf("o"), latin.indexOf("o") + 1, "ō");
                     } else {
                         latinChar = hiraToRomaji.get(String.valueOf(chunk.charAt(0)));
+                        cursor --; //parse the first char and then move the cursor back by one
                     }
                 } else {
                     //get the latin translation for the chunk
@@ -130,6 +135,8 @@ public class HiraganaToRomajiConverter implements Converter {
         String result = latin.toString();
         if (result.endsWith("uu")) {
             result = result.replace("uu", "ū");
+        } else if (result.endsWith("oo")) {
+            result = result.replace("oo", "ō");
         }
 
         return result;
