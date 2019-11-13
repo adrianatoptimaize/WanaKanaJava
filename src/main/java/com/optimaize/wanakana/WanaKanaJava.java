@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
  * A Java version of the Javascript WanaKana romaji-to-kana converter library (https://github.com/WaniKani/WanaKana)
  * Version 1.1.1
  */
+@Deprecated
 public class WanaKanaJava
 {
 
