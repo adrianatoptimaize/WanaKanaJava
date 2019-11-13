@@ -32,6 +32,12 @@ public class HiraganaToRomajiConverterTest {
                 {"たかとお", "takatō"},
                 {"おの", "ono"},
 
+                {"かわえ", "kawae"},
+                {"かわうえ", "kawaue"},
+                {"まつお", "matsuo"},
+                {"まつのお", "matsunō"},
+                {"つげうえ", "tsugeue"},
+
                 {"ぎゃ", "gya"},
                 {"ちゅ", "chu"},
                 {"ちゅう", "chū"},
@@ -56,6 +62,13 @@ public class HiraganaToRomajiConverterTest {
                 {"におと", "nioto"},
                 {"ちょと", "choto"},
 
+                {"みうえ", "miue"},
+                {"いおう","iō"},
+                {"かこう","kakō"},
+                {"よぼう","yobō"},
+                {"りゅうえん", "ryuuen"},
+                {"にしうえはら", "nishiuehara"},
+
                 {"ええいち", "ēichi"},
                 {"ぎの", "gino"},
 
@@ -77,14 +90,30 @@ public class HiraganaToRomajiConverterTest {
     @DataProvider
     public Object[][] variants() {
         return new Object[][]{
+                {"うえい", Collections.singletonList("uei")},
+                {"みうえ", Collections.singletonList("miue")},
                 {"さと", Collections.singletonList("sato")},
                 {"ぎの", Collections.singletonList("gino")},
+                {"まつお", Collections.singletonList("matsuo")},
+                {"かわうえ", Collections.singletonList("kawaue")},
+                {"つげうえ", Collections.singletonList("tsugeue")},
+                {"りゅうえん", Collections.singletonList("ryuuen")},
+                {"にしうえはら", Collections.singletonList("nishiuehara")},
+
+                {"いおう",Arrays.asList("io", "ioh", "ioo")},
+                {"かこう",Arrays.asList("kako", "kakoh", "kakoo")},
+                {"よぼう",Arrays.asList("yobo", "yoboh", "yoboo")},
+                {"まつのお", Arrays.asList("matsuno", "matsunoh", "matsunoo")},
                 {"おうの", Arrays.asList("ono", "ohno", "oono")},
                 {"おうのちゅう", Arrays.asList("onochu", "ohnochu", "oonochu")},
                 {"おおや", Arrays.asList("oya", "ohya", "ooya")},
                 {"おおの", Arrays.asList("ono", "ohno", "oono")},
                 {"ようだ", Arrays.asList("yoda", "yohda", "yooda")},
                 {"どうした", Arrays.asList("doshita", "dohshita", "dooshita")},
+
+                {"たのうえ", Arrays.asList("tanoe", "tanohe", "tanooe")},
+                {"こうえん", Arrays.asList("koen", "kohen", "kooen")},
+                {"みょうえん", Arrays.asList("myoen", "myohen", "myooen")},
 
                 {"ぎょうと", Arrays.asList("gyoto", "gyohto", "gyooto")},
                 {"きょうと", Arrays.asList("kyoto", "kyohto", "kyooto")},
