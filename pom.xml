@@ -7,25 +7,27 @@
     <name>wanakana</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
     <url>https://github.com/adrianatoptimaize/WanaKanaJava</url>
+    <description>
+        This is based on the original WanaKanaJava for Android.
+        It contains most of the original code, split into separate classes and converters.
+
+        New parsing was implemented from Hiragana to Romaji, to handle name conversion conventions in Japanese foreign passports.
+    </description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+
+        <testng.version>7.0.0</testng.version>
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            &lt;!&ndash; used for capitalizing words. may be removed, not sure yet. &ndash;&gt;-->
-<!--            <groupId>org.apache.commons</groupId>-->
-<!--            <artifactId>commons-text</artifactId>-->
-<!--            <version>1.8</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.0.0</version>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
